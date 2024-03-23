@@ -4,12 +4,12 @@ import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporte
 
 export let options = {
   stages: [
-    { duration: '1m', target: 1000 }, // 1000 virtual users for 1 minute
-    { duration: '2m', target: 1000 }, // ramp up to 1000 virtual users for 2 minutes
-    { duration: '1m', target: 0 },    // ramp down to 0 virtual users for 1 minute
+    { duration: '1m', target: 1000 }, 
+    { duration: '2m', target: 1000 }, 
+    { duration: '1m', target: 0 },    
   ],
   thresholds: {
-    'http_req_duration': ['p(95)<2000'], // 95% of requests must complete below 2000ms
+    'http_req_duration': ['p(95)<2000'], 
   },
   
 };
